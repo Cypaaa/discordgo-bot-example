@@ -9,7 +9,8 @@ import (
 // map of command with their IDs upfront. The ID placeholder can be anything
 // as it will be replaced after command registration
 var CommandList = Commands{
-	"PingCommand": PingCommand,
+	"PingCommand":   PingCommand,
+	"RepeatCommand": RepeatCommand,
 }
 
 type Commands map[string]*Command
