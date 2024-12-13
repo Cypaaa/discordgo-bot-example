@@ -59,3 +59,11 @@ func (cs *Commands) Reload(s *discordgo.Session) {
 	}
 	*cs = ncs
 }
+
+func GetOptionMap(options []*discordgo.ApplicationCommandInteractionDataOption) map[string]*discordgo.ApplicationCommandInteractionDataOption {
+	var om = map[string]*discordgo.ApplicationCommandInteractionDataOption{}
+	for _, o := range options {
+		om[o.Name] = o
+	}
+	return om
+}
